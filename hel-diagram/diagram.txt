@@ -1,0 +1,21 @@
+hel-diagram /
+📁 hel-diagram /
+├── 📄 README.md
+├── 📁 assets
+│   └── 📄 diagram_template.md
+├── 📁 core
+│   ├── 📁 __pycache__
+│   │   ├── 📄 tree_builder.cpython-313.pyc
+│   │   └── 📄 tree_generator.cpython-313.pyc
+│   ├── 📄 tree_builder.py
+│   └── 📄 tree_generator.py
+├── 📄 diagram.txt
+├── 📁 gui
+│   ├── 📁 __pycache__
+│   │   └── 📄 main_window.cpython-313.pyc
+│   ├── 📄 icon.png
+│   └── 📄 main_window.py
+├── 📄 hel-diagram.desktop
+├── 📄 main.py
+└── 📁 resources
+    └── 📄 __init__.py
