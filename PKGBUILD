@@ -7,16 +7,16 @@ arch=('any')
 url="https://github.com/helwan-linux/hel-diagram-builder"
 license=('MIT')
 depends=('python' 'python-pyqt5' 'python-watchdog')
-source=("hel-diagram-$pkgver.tar.gz")
+makedepends=('git')
+source=("git+https://github.com/helwan-linux/hel-diagram-builder.git")
 md5sums=('SKIP')
 
 build() {
-  cd "$srcdir/$pkgname-$pkgver"
   echo "Nothing to build."
 }
 
 package() {
-  cd "$srcdir/$pkgname-$pkgver"
+  cd "$srcdir/hel-diagram-builder"
 
   install -d "$pkgdir/opt/$pkgname"
   cp -r hel-diagram/* "$pkgdir/opt/$pkgname/"
@@ -30,5 +30,5 @@ EOF
 
   # أيقونة وملف desktop
   install -Dm644 hel-diagram/gui/icon.png "$pkgdir/usr/share/pixmaps/$pkgname.png"
-  install -Dm644 hel-diagram.desktop "$pkgdir/usr/share/applications/$pkgname.desktop"
+  install -Dm644 hel-diagram/hel-diagram.desktop "$pkgdir/usr/share/applications/$pkgname.desktop"
 }
