@@ -1,92 +1,56 @@
-/* ==== Helwan Linux GUI Theme (Olive Lemon Strawberry Metallic) ==== */
+/* ==== Helwan Linux GUI Theme (Metallic Woodworm - PyQt5 Compatible) ==== */
 
 /* General background and font */
 QWidget {
-    background-color: rgba(60, 60, 20, 220); /* زيتوني داكن */
-    color: #fff9d6; /* لمسة ليمونية فاتحة للنصوص */
+    background-color: #3b2f2f; /* خشبي داكن */
+    color: #d9cbb0; /* نصوص فاتحة */
     font-family: "Ubuntu", "DejaVu Sans", "Noto Sans", sans-serif;
     font-size: 11pt;
 }
 
 /* Tabs */
 QTabWidget::pane {
-    border: 2px solid #7a7a2e;
-    background-color: #3c3c14;
+    border: 2px solid #5a443c;
+    background-color: #2e2523;
     border-radius: 6px;
 }
 QTabBar::tab {
-    background-color: qlineargradient(
-        x1:0, y1:0, x2:0, y2:1,
-        stop:0 #55662f, stop:0.5 #a1c12d, stop:1 #ff6f91
-    );
-    color: #fff9d6;
+    background-color: #4b362f; /* تدرج مبسط بدون خصائص غير مدعومة */
+    color: #d9cbb0;
     padding: 6px 14px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
 }
 QTabBar::tab:selected {
-    background-color: qlineargradient(
-        x1:0, y1:0, x2:0, y2:1,
-        stop:0 #a1c12d, stop:0.5 #ff6f91, stop:1 #55662f
-    );
+    background-color: #6a4d3c;
     font-weight: bold;
 }
 QTabBar::tab:hover {
-    background-color: qlineargradient(
-        x1:0, y1:0, x2:0, y2:1,
-        stop:0 #ff6f91, stop:0.5 #a1c12d, stop:1 #55662f
-    );
-}
-
-/* Labels */
-QLabel {
-    color: #f5f0b0; /* نصوص فاتحة متناسقة مع الليموني */
-    font-weight: 500;
-}
-
-/* Input boxes */
-QLineEdit {
-    background-color: #4a4a18;
-    border: 1px solid #7a7a2e;
-    border-radius: 4px;
-    color: #fff9d6;
-    padding: 4px;
-}
-QLineEdit:read-only {
-    background-color: #5a5a20;
+    background-color: #7b5e4b;
 }
 
 /* Buttons */
 QPushButton {
-    background-color: qlineargradient(
-        x1:0, y1:0, x2:0, y2:1,
-        stop:0 #55662f, stop:0.5 #a1c12d, stop:1 #ff6f91
-    );
-    color: #fff9d6;
+    background-color: #4b362f;
+    color: #d9cbb0;
     border-radius: 6px;
-    border: 1px solid #7a7a2e;
+    border: 1px solid #5a443c;
     padding: 6px 12px;
 }
 QPushButton:hover {
-    background-color: qlineargradient(
-        x1:0, y1:0, x2:0, y2:1,
-        stop:0 #ff6f91, stop:0.5 #a1c12d, stop:1 #55662f
-    );
+    background-color: #7b5e4b;
 }
 QPushButton:pressed {
-    background-color: qlineargradient(
-        x1:0, y1:0, x2:0, y2:1,
-        stop:0 #a1c12d, stop:0.5 #ff6f91, stop:1 #55662f
-    );
+    background-color: #6a4d3c;
 }
 QPushButton:disabled {
-    background-color: #3c3c14;
-    color: #9b9b6f;
+    background-color: #2e2523;
+    color: #7a6b5a;
 }
 
 /* Group boxes */
 QGroupBox {
-    border: 1px solid #7a7a2e;
+    border: 1px solid #5a443c;
     margin-top: 10px;
     border-radius: 8px;
     padding-top: 10px;
@@ -94,10 +58,24 @@ QGroupBox {
 QGroupBox::title {
     subcontrol-origin: margin;
     subcontrol-position: top left;
-    color: #ff6f91; /* فراولة مستحية */
+    color: #e07b5c; /* لمسة السوس */
     font-weight: bold;
-    background-color: #3c3c14;
+    background-color: #2e2523;
     padding: 0 5px;
+}
+
+/* TextEdit */
+QTextEdit {
+    background-color: #3c2f2c;
+    border: 1px solid #5a443c;
+    border-radius: 6px;
+    color: #d9cbb0;
+}
+
+/* Labels */
+QLabel {
+    color: #e0d4b0;
+    font-weight: 500;
 }
 
 /* Checkboxes */
@@ -107,37 +85,29 @@ QCheckBox {
 QCheckBox::indicator {
     width: 14px;
     height: 14px;
-    border: 1px solid #a1c12d;
+    border: 1px solid #6a4d3c;
     border-radius: 3px;
-    background: #3c3c14;
+    background: #3c2f2c;
 }
 QCheckBox::indicator:checked {
-    background-color: #ff6f91;
+    background-color: #e07b5c;
 }
 
 /* Progress bar */
 QProgressBar {
-    border: 1px solid #7a7a2e;
+    border: 1px solid #5a443c;
     border-radius: 5px;
     text-align: center;
     color: #ffffff;
-    background-color: #3c3c14;
+    background-color: #2e2523;
 }
 QProgressBar::chunk {
-    background-color: #a1c12d;
+    background-color: #6a4d3c;
     border-radius: 4px;
-}
-
-/* TextEdit (logs) */
-QTextEdit {
-    background-color: #4a4a18;
-    border: 1px solid #7a7a2e;
-    border-radius: 6px;
-    color: #fff9d6;
 }
 
 /* MessageBox */
 QMessageBox {
-    background-color: #3c3c14;
-    color: #fff9d6;
+    background-color: #2e2523;
+    color: #d9cbb0;
 }
