@@ -199,6 +199,14 @@ class HelDiagramApp(QMainWindow):
 
 def run_app():
     app = QApplication(sys.argv)
+
+    # Load Helwan Style (QSS)
+    style_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "helwan_style.qss")
+    if os.path.exists(style_path):
+        with open(style_path, "r", encoding="utf-8") as f:
+            app.setStyleSheet(f.read())
+
     window = HelDiagramApp()
     window.show()
     sys.exit(app.exec_())
+
